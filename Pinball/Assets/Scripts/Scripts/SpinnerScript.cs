@@ -20,19 +20,11 @@ public class SpinnerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
-        
-        //GameObject game = GameObject.FindGameObjectWithTag("Game");
-
-        //gameScript = game.GetComponent<GameScript>();
-
-        //rb.angularVelocity = new Vector3(0.4f, 0, 0);
+        audioSource = GetComponent<AudioSource>();        
     }
 
     void Update()
-    {
-
-        //Debug.Log($"AnglesE = {Quaternion.Angle(transform.rotation, lastFrameAngle)}");
+    {        
         
         if(IsMoving)
         {
