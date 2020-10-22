@@ -134,7 +134,11 @@ public class HighscoreTable : MonoBehaviour {
                 highscores.highscoreEntryList.Add(highScoreEntry);
 
                 SortListTable(highscores);
-                             
+
+                // Save updated Highscores
+                string json = JsonUtility.ToJson(highscores);
+                PlayerPrefs.SetString("HighscoreTable", json);
+                PlayerPrefs.Save();                
             }
         }
     }
