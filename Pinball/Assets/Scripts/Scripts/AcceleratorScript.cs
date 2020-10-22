@@ -32,7 +32,7 @@ public class AcceleratorScript : MonoBehaviour {
         Vector3 newDirection = collision.contacts[0].normal;
 
         // Change direction
-        // newDirection = -newDirection.normalized;
+        newDirection = -newDirection.normalized;
 
         // Disable any vertical movement
         newDirection.y = 0;
