@@ -134,11 +134,7 @@ public class HighscoreTable : MonoBehaviour {
                 highscores.highscoreEntryList.Add(highScoreEntry);
 
                 SortListTable(highscores);
-
-                // Save updated Highscores
-                string json = JsonUtility.ToJson(highscores);
-                PlayerPrefs.SetString("HighscoreTable", json);
-                PlayerPrefs.Save();                
+                             
             }
         }
     }
@@ -193,8 +189,7 @@ public class HighscoreTable : MonoBehaviour {
 
     private void EnterName() {
         if (initials.Length < 3) {
-            if (signalHandler.buttons.rightButton && readyToMove) {
-            //if (Input.GetKey("up") && readyToMove) {
+            if (signalHandler.buttons.rightButton && readyToMove) {            
                 if (stepper < alphabet.Length - 1) {
                     stepper++;
                     Letters[letterSelect].text = alphabet[stepper].ToString();
@@ -203,8 +198,7 @@ public class HighscoreTable : MonoBehaviour {
                 }
             }
 
-            if (signalHandler.buttons.leftButton && readyToMove) {
-                //if (Input.GetKey("down") && readyToMove) {
+            if (signalHandler.buttons.leftButton && readyToMove) {                
                 if (stepper > 0) {
                     stepper--;
                     Letters[letterSelect].text = alphabet[stepper].ToString();
@@ -219,8 +213,7 @@ public class HighscoreTable : MonoBehaviour {
 
                     if (letterSelect == Letters.Length - 1) {
                         letterSelect = 3; // breaks loop then sets name 
-                        string nameFromInput = initials;
-                        //int scoreTest = 47;
+                        string nameFromInput = initials;                    
 
                         foreach (GameObject scores in GameObject.FindGameObjectsWithTag("Template")) {
                             Destroy(scores);
