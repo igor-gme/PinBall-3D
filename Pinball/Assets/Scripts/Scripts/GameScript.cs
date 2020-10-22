@@ -46,8 +46,7 @@ public class GameScript : MonoBehaviour
         foreach(GameObject sphere in spheres)
         {
             Rigidbody rb = sphere.GetComponent<Rigidbody>();
-
-            //rb.velocity = new Vector3(amount.angleX, 0, amount.angleZ);
+            
             rb.AddForce(amount.angleX, 0, amount.angleZ);
         }
     }

@@ -27,8 +27,7 @@ public class ResetBehaviour : MonoBehaviour
         if(resetPosition)
         {
             if(objectToResetPosition == null)
-            {
-                //Debug.Log("Object to reset position is null!");
+            {                
                 objectToResetPosition = gameObject;
             }
 
@@ -48,19 +47,15 @@ public class ResetBehaviour : MonoBehaviour
     }
 
     public void Reset()
-    {
-        //Debug.Log("Resetting!");
+    {        
 
         if(resetPosition)
         {
-            //Debug.Log("ResetPosition?");
-
             objectToResetPosition.transform.localPosition = originalPosition;
         }
 
         if(resetTrigger)
         {
-            //Debug.Log("Reset Trigger?");
             trigger.enabled = resetTriggerTo;
         }
     }
