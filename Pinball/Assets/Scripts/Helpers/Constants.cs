@@ -27,6 +27,6 @@ public static class Constants
     public static string RANKING_TABLE_CAMERA = "Ranking Table Camera";
     public const string  FGARCADE_BACKGLASS_CAMERA = "FGArcade Backglass Camera";
     public const string BONUS_LEVEL_BACKGLASS_CAMERA = "Bonus Level Backglass Camera";
-
+    public const string UART_LAUCHER = "UART Generate Launcher";
     public const string SCORE_MANAGER_TAG = "Score Manager";
 } 
