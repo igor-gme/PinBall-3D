@@ -146,7 +146,7 @@ public class UART
 
             if (generateLauncher)
             {
-                Debug.Log("UART Generate Launcher");
+                Debug.Log(Constants.UART_LAUCHER);
                 GenerateLauncher();
             }
 
@@ -158,11 +158,7 @@ public class UART
             AddToBuffer();
 
             mutex.ReleaseMutex();
-
-            // if (receivedMessage[0] != 0 || receivedMessage[1] != 0)
-            // {
-            //     Debug.Log($"GetMessage receivedMessage: {receivedMessage[0]} {receivedMessage[1]}");
-            // }
+            
         }
 
         Debug.Log("Finished fake read!");
